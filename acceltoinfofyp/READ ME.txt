@@ -1,0 +1,22 @@
+READ ME:
+Models can be found in app/models.
+Controllers can be found in app/http/controller.
+Views can be found in resources/views.
+CSS can be found in resources/css.
+The database can be found in database.
+
+Running the project:
+1. Ensure xampp is running.
+2. Go to the base home with all folders from the zipped project. 
+3. In the directory type "cmd" and press Enter. 
+4. After the command prompt comes up, type "php artisan serve" and press enter. 
+5. Wait for the server to come up. Once it comes up, click on the link and the server will be up.
+
+Layout:
+Home: A place to show news. 
+Drivers: a place to view driver details as a user and CRUD for an admin.
+Teams: a place to view teams details as a user and CRUD for an admin.
+Forums: a place to CRUD forum posts as a user and an admin. 
+Gallery: An exclusive place for admins to CRUD images. 
+Upload: An exclusive place for admins to upload images.
+Profile: A place for users to edit their profiles.

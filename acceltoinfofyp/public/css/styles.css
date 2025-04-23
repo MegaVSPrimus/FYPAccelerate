@@ -1,0 +1,26 @@
+/*Homepage*/
+.container {
+    background-color:rgb(171, 207, 207)
+    
+}
+
+
+
+
+img {
+    width: 250px; /* Static width */
+    height: 250px; /* Static height */
+    object-fit: cover; /* Ensures the image doesn't distort but covers the area */
+}
+
+/* Optional styling for section titles */
+.section-title {
+}
+
+/* Styling for items inside sections */
+.item {
+    margin-bottom: 5px;
+}
+.test{
+    color: #000;
+}
