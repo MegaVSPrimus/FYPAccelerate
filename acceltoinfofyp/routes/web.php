@@ -84,7 +84,6 @@ Route::prefix('fantasy')->group(function () {
 Route::get('/leaderboard', [LeaderboardController::class, 'index'])->name('leaderboard');
 
 // Admin Routes (Requires Admin Middleware)
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
     Route::get('/admin/points', [FantasyTeamController::class, 'editPoints']);
     Route::post('/admin/points', [FantasyTeamController::class, 'updatePoints']);
 
