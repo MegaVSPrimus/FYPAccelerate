@@ -95,7 +95,7 @@
         <div class="image-card">
             <!-- Image Display -->
             <h3>{{ $image->name }}</h3>
-            <img src="{{ asset('resources/' . $image->pathNew) }}" alt="{{ $image->name }}">
+            <img src="{{ asset( $image->pathNew) }}" alt="{{ $image->name }}">
 
             <!-- Edit Form -->
             <form action="/images/{{ $image->id }}" method="POST">
