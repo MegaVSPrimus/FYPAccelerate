@@ -16,7 +16,7 @@
             <option value="{{ $driver->id }}">{{ $driver->name }}</option>
         @endforeach
     </select>
-    <button type="submit">Add Driver</button>
+    <button type="submit">Addriver</button>
 </form>
 <form method="POST" action="/fantasy-team/add-team">
     @csrf
