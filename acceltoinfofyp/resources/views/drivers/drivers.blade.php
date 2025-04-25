@@ -26,7 +26,7 @@
 
             @if ($driverImage)
                 <!-- Display driver image if found -->
-                <img src="{{ asset('storage/' . $driverImage->pathNew) }}" alt="{{ $driver->name }}" style="width: 150px; height: auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <img src="{{ asset( $driverImage->pathNew) }}" alt="{{ $driver->name }}" style="width: 150px; height: auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
             @else
                 <!-- Fallback message if no image is found -->
                 <p>No image found for {{ $driver->name }}.</p>
