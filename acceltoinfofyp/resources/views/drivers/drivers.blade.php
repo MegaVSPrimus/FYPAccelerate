@@ -20,26 +20,20 @@
             </p>
 
             @php
-                $stats = $driverStats->firstWhere('driver_id', $driver->id);
-                $matchFound = false;
+                // Find the first image associated with the driver
+                $driverImage = $images->firstWhere('name', $driver->name);
             @endphp
 
-            @foreach ($images as $image)
-                @if ($driver->name === $image->name)
-                    @php
-                        $matchFound = true;
-                    @endphp
-                    <img src="{{ asset('storage/' . $image->pathNew) }}" alt="{{ $image->name }}">
-
-                    
-                @endif
-            @endforeach
-
-            @if (!$matchFound)
+            @if ($driverImage)
+                <!-- Display driver image if found -->
+                <img src="{{ asset('storage/' . $driverImage->pathNew) }}" alt="{{ $driver->name }}" style="width: 150px; height: auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            @else
+                <!-- Fallback message if no image is found -->
                 <p>No image found for {{ $driver->name }}.</p>
             @endif
 
             @if(auth()->check() && auth()->user()->is_admin)
+                <!-- Admin Actions -->
                 <div class="admin-actions-delete">
                     <form action="/drivers/{{ $driver->id }}" method="POST">
                         @csrf
@@ -49,15 +43,14 @@
                 </div>
                 <div class="admin-actions-edit">
                     <form action="/editDriver/{{ $driver->id }}" method="GET">
-                        @csrf
                         <input type="submit" value="Edit {{ $driver->name }}">
                     </form>
                 </div>
-                @endif
+            @endif
 
+            <!-- View Driver Details -->
             <div class="driver-details">
                 <form action="/drivers/{{ $driver->id }}" method="GET">
-                    @csrf
                     <input type="submit" value="View {{ $driver->name }}'s Details">
                 </form>
             </div>
