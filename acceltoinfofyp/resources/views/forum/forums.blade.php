@@ -3,11 +3,11 @@
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 @if(auth()->check())
 
-<form action="/createForum" method="get">
+<form action="https://fypaccelerate-production.up.railway.app/createForum" method="get">
     <button type="submit" class="btn btn-primary">Create a Post</button>
 </form>
 @endif
-<form method="GET" action="/forums/">
+<form method="GET" action="https://fypaccelerate-production.up.railway.app/forums/">
     <div class="form-group">
         <input type="text" name="search" placeholder="Search posts..." value="{{ request('search') }}" class="form-control">
     </div>

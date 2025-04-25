@@ -42,7 +42,7 @@
                     </form>
                 </div>
                 <div class="admin-actions-edit">
-                    <form action="/editDriver/{{ $driver->id }}" method="GET">
+                    <form action="https://fypaccelerate-production.up.railway.app/editDriver/{{ $driver->id }}" method="GET">
                         <input type="submit" value="Edit {{ $driver->name }}">
                     </form>
                 </div>

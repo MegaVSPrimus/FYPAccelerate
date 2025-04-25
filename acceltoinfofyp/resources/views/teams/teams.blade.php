@@ -2,12 +2,12 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
 
 @if(auth()->check() && auth()->user()->is_admin)
 
 <div class="create-team">
-        <form action="/insertTeam" method="GET">
+        <form action="https://fypaccelerate-production.up.railway.app/insertTeam" method="GET">
             <input type="submit" value="Create Team">
         </form>
 </div>
@@ -38,7 +38,7 @@
 
             @if(auth()->check() && auth()->user()->is_admin)
                 <div class="admin-actions-delete">
-                    <form action="/teams/{{ $team->id }}" method="POST">
+                    <form action="https://fypaccelerate-production.up.railway.app/teams/{{ $team->id }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <input type="submit" value="Delete {{ $team->name }}">
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="admin-actions-edit">
-                    <form action="/editTeam/{{ $team->id }}" method="GET">
+                    <form action="https://fypaccelerate-production.up.railway.app/editTeam/{{ $team->id }}" method="GET">
                         @csrf
                         <input type="submit" value="Edit {{ $team->name }}">
                     </form>
@@ -54,7 +54,7 @@
             @endif
 
             <div class="driver-details">
-                <form action="/teams/{{ $team->id }}" method="GET">
+                <form action="https://fypaccelerate-production.up.railway.app/teams/{{ $team->id }}" method="GET">
                     @csrf
                     <input type="submit" value="View {{ $team->name }}'s Details">
                 </form>
