@@ -94,6 +94,7 @@
             <li>
                 <a href="/">
                     <img src="{{ asset('images/1740843778.png') }}" alt="Formula One Logo" style="width:50px; height:auto;">
+
                 </a>
             </li>
 
