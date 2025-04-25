@@ -28,7 +28,7 @@
                     @php
                         $matchFound = true; // Mark a match as found
                     @endphp
-                    <img src="{{ asset('storage/' . $image->pathNew) }}" alt="{{ $image->name }}">
+                    <img src="{{ asset($image->pathNew) }}" alt="{{ $image->name }}">
                 @endif
             @endforeach
 

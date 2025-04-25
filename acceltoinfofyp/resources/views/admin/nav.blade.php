@@ -118,11 +118,11 @@
 
                 @if ($userImage)
                     <li>
-                        <img src="{{ asset('storage/' . $userImage->path) }}" alt="Profile Image">
+                        <img src="{{ asset($userImage->path) }}" alt="Profile Image">
                     </li>
                 @else
                     <li>
-                        <img src="{{ asset('images/default-profile.png') }}" alt="Default Profile Image">
+                        <img src="{{ asset('default-profile.png') }}" alt="Default Profile Image">
                     </li>
                 @endif
 
