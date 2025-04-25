@@ -35,7 +35,7 @@
             @if(auth()->check() && auth()->user()->is_admin)
                 <!-- Admin Actions -->
                 <div class="admin-actions-delete">
-                    <form action="/drivers/{{ $driver->id }}" method="POST">
+                    <form action="https://fypaccelerate-production.up.railway.app/drivers/{{ $driver->id }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <input type="submit" value="Delete {{ $driver->name }}">
