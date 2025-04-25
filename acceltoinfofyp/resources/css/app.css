@@ -1,9 +1,592 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #504640;
+    /* General Styling */
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f4f4f9; /* Light grey for consistency */
+        color: #333;
+        margin: 0;
+        padding: 20px;
+    }
+
+    /* Create Team Section */
+    .create-team {
+        background-color: rgb(141, 183, 215);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+/* Driver Grid Styling */
+.driver-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Spacing between cards */
+    padding: 20px;
 }
-header, footer {
-    background-color: #333;
-    color: red;
-    padding: 10px;
+
+.driver-card {
+    background-color: #fff; /* White for contrast */
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.driver-card img {
+    width: 150px; /* Fixed width for images */
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+    margin-bottom: 10px;
+}
+
+    .create-team input[type="submit"] {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 25px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .create-team input[type="submit"]:hover {
+        background-color: #0056b3;
+        transform: scale(1.1); /* Hover effect */
+    }
+
+    /* Team Grid */
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive layout */
+        gap: 20px;
+        background-color: rgb(141, 183, 215);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .team-card {
+        background-color: #fff;
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+        transform: translateY(-5px); /* Lift card slightly */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add shadow depth */
+    }
+
+    .team-card img {
+        width: 80%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .team-card p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+    /* Admin Actions */
+    .admin-actions form {
+        display: inline-block;
+    }
+
+    .admin-actions-delete input[type="submit"],
+    .admin-actions-edit input[type="submit"],
+    .driver-details input[type="submit"] {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .admin-actions-delete input[type="submit"] {
+        background-color: rgb(239, 43, 8); /* Red shade */
+    }
+
+    .admin-actions-delete input[type="submit"]:hover {
+        background-color: rgb(228, 73, 73); /* Darker red */
+        transform: scale(1.05);
+    }
+
+    .admin-actions-edit input[type="submit"] {
+        background-color: rgb(69, 202, 107); /* Green shade */
+    }
+
+    .admin-actions-edit input[type="submit"]:hover {
+        background-color: rgb(131, 216, 145); /* Lighter green */
+        transform: scale(1.05);
+    }
+
+    .driver-details input[type="submit"] {
+        background-color: rgb(162, 78, 227); /* Purple shade */
+    }
+
+    .driver-details input[type="submit"]:hover {
+        background-color: rgb(122, 50, 190); /* Darker purple */
+        transform: scale(1.05);
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .driver-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .driver-card {
+        padding: 15px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+        color: #0074d9;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16px;
+        margin: 10px 0;
+        color: #555;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-primary {
+        background-color: #0074d9;
+        color: #fff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056a3;
+        transform: scale(1.05);
+    }
+
+    form {
+        margin: 20px 0;
+    }
+
+    input[type="submit"],
+    button {
+        background-color: #0074d9;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    input[type="submit"]:hover,
+    button:hover {
+        background-color: #0056a3;
+        transform: scale(1.05);
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+    }
+
+    .comment-section {
+        margin-top: 20px;
+    }
+
+    .comment {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .comment strong {
+        font-size: 16px;
+        color: #333;
+    }
+
+    textarea {
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    body {
+        font-family: 'Open Sans', sans-serif; /* Modern font for clarity */
+        background-color: #f4f4f9; /* Soft grey for a clean look */
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+    
+    /* Header Styling */
+    header {
+        background-color: #0074d9; /* Formula 1 blue theme */
+        color: #fff;
+        padding: 15px 20px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Navigation Bar Styling */
+    nav {
+        background-color: #0056a3; /* Slightly darker blue */
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav a {
+        color: #fff;
+        margin: 0 10px;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease, transform 0.2s ease;
+    }
+    
+    nav a:hover {
+        color: #ffcc00; /* Gold hover effect */
+        transform: translateY(-2px); /* Lift animation */
+    }
+    
+    /* Container Styling */
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Form Styling */
+    form {
+        margin-bottom: 20px;
+    }
+    
+    form .form-group {
+        margin-bottom: 10px;
+    }
+    
+    form input[type="text"],
+    form select,
+    form button {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 100%;
+    }
+    
+    form button {
+        background-color: #0074d9;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    form button:hover {
+        background-color: #0056a3;
+        transform: scale(1.05);
+    }
+    
+    /* Forum Category Styling */
+    .forum-category {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #0074d9;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 5px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Forum Topic Styling */
+    .item {
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .item:hover {
+        transform: translateY(-5px); /* Lift effect */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .item p {
+        margin: 10px 0;
+        font-size: 16px;
+        color: #555;
+    }
+    
+    .item a {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #0074d9;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    
+    .item a:hover {
+        background-color: #0056a3;
+    }
+    
+    /* Footer Styling */
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 15px 20px;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
+    @media (min-width: 768px) {
+        .flex {
+            display: flex;
+        }
+    
+        .sidebar {
+            flex: 1;
+            margin-right: 20px;
+        }
+    
+        .main-content {
+            flex: 3;
+        }
+    }
+
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f4f4f9; /* Soft grey for consistency */
+        color: #333;
+        margin: 0;
+        padding: 20px;
+    }
+
+    /* Page Header */
+    h1 {
+        font-size: 28px;
+        color: #0074d9; /* Formula 1 blue theme */
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* Paragraph Styling */
+    p {
+        font-size: 18px;
+        color: #555;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* "Back to Drivers" Button */
+    .btn-primary {
+        display: block;
+        width: fit-content;
+        margin: 20px auto;
+        padding: 12px 25px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #0074d9;
+        border: none;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056a3;
+        transform: scale(1.05); /* Slight zoom-in effect */
+    }
+
+    /* Message Box for Not Found */
+    .message-box {
+        text-align: center;
+        padding: 15px;
+        margin: 20px auto;
+        background-color: #fff;
+        color: #ff0000; /* Red for emphasis */
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        font-size: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        /* General Styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f9; /* Light and modern grey */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+    
+        /* Create Driver Section */
+        .create-driver {
+            background-color: rgb(141, 183, 215);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+    
+        .create-driver input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+    
+        .create-driver input[type="submit"]:hover {
+            background-color: #0056a3;
+            transform: scale(1.1); /* Slight hover zoom effect */
+        }
+    
+        /* Driver Grid */
+        .driver-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            background-color: rgb(141, 183, 215);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    
+        .driver-card {
+            background-color: #fff;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .driver-card:hover {
+            transform: translateY(-5px); /* Lift card slightly */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add shadow depth */
+        }
+    
+        .driver-card img {
+            width: 80%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    
+        .driver-card p {
+            font-size: 16px;
+            color: #555;
+        }
+    
+        /* Admin Actions */
+        .admin-actions form {
+            display: inline-block;
+        }
+    
+        .admin-actions-delete input[type="submit"],
+        .admin-actions-edit input[type="submit"],
+        .driver-details input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+    
+        .admin-actions-delete input[type="submit"] {
+            background-color: rgb(239, 43, 8);
+        }
+    
+        .admin-actions-delete input[type="submit"]:hover {
+            background-color: rgb(228, 73, 73);
+            transform: scale(1.05);
+        }
+    
+        .admin-actions-edit input[type="submit"] {
+            background-color: rgb(69, 202, 107);
+        }
+    
+        .admin-actions-edit input[type="submit"]:hover {
+            background-color: rgb(131, 216, 145);
+            transform: scale(1.05);
+        }
+    
+        .driver-details input[type="submit"] {
+            background-color: rgb(162, 78, 227);
+        }
+    
+        .driver-details input[type="submit"]:hover {
+            background-color: rgb(122, 50, 190);
+            transform: scale(1.05);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+        }
