@@ -16,6 +16,29 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin-bottom: 20px;
     }
+/* Driver Grid Styling */
+.driver-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Spacing between cards */
+    padding: 20px;
+}
+
+.driver-card {
+    background-color: #fff; /* White for contrast */
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.driver-card img {
+    width: 150px; /* Fixed width for images */
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+    margin-bottom: 10px;
+}
 
     .create-team input[type="submit"] {
         background-color: #007BFF;
