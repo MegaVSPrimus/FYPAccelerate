@@ -1,7 +1,7 @@
 @extends('admin.nav')
 
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
 @if(auth()->check() && auth()->user()->is_admin)
 <form action="/admin/points" method="GET">
                     @csrf
