@@ -52,15 +52,21 @@ public function update(Request $request, $id)
         ]);
     
         if ($request->hasFile('image')) {
-                $file = $request->file('image');
-                
-                // Generate a unique filename with timestamp and original extension
-                $filename = time() . '.' . $file->getClientOriginalExtension();
-                
-                // Define the target path for storing the image
-                $path = $file->storeAs('public/images', $filename, 'public'); // Store directly in storage/app/public/images
-                
-                // Optionally, return the path or store it in the database
+            $file = $request->file('image');
+            
+            // Generate a unique filename with timestamp and original extension
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            
+            // Define the target path for storing the image in the `resources/images` directory
+            $destinationPath = resource_path('images'); // Get the full path to resources/images
+            
+            // Move the file to the `resources/images` directory
+            $file->move($destinationPath, $filename);
+            
+            // Optionally, generate a relative path to store in the database or return
+            $path = 'resources/images/' . $filename;
+            
+
         
             
             // Save full path in DB
