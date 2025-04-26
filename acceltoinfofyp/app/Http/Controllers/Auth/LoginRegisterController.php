@@ -49,8 +49,7 @@ class LoginRegisterController extends Controller implements HasMiddleware
         $credentials = $request->only('email', 'password');
         Auth::attempt($credentials);
         $request->session()->regenerate();
-        return redirect()->route('generic.welcome')
-            ->withSuccess('You have successfully registered & logged in!');
+        return view('generic.welcome');
     }
 
     public function login(): View
