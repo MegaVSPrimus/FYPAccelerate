@@ -86,7 +86,7 @@
 
 <div class="upload-container">
     <h2>Upload an Image</h2>
-    <form action="https://fypaccelerate-production.up.railway.app/{{ route('image.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('image.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="text" name="name" placeholder="Image Name" required>
         <input type="file" name="image" required>
