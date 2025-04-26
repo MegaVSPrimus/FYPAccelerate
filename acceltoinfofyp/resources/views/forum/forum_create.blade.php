@@ -102,7 +102,7 @@
         <div class="image-selection-container" style="display: flex; flex-wrap: wrap; gap: 10px;">
             @foreach($images as $image)
                 <label style="display: block; text-align: center;" class="image-option">
-                    <img src="{{ asset('storage/'.$image->pathNew) }}" 
+                    <img src="{{ asset($image->pathNew) }}" 
                          alt="{{ $image->name }}" 
                          style="width: 150px; height: auto; border: 1px solid #ccc; padding: 5px;" 
                          data-image-id="{{ $image->id }}">
