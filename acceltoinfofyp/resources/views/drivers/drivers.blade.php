@@ -6,7 +6,7 @@
 
 <div class="create-driver">
     @if(auth()->check() && auth()->user()->is_admin)
-        <form action="https://fypaccelerate-production.up.railway.app//insert" method="GET">
+        <form action="https://fypaccelerate-production.up.railway.app/insert" method="GET">
             <input type="submit" value="Create Driver">
         </form>
     @endif
@@ -50,7 +50,7 @@
 
             <!-- View Driver Details -->
             <div class="driver-details">
-                <form action="https://fypaccelerate-production.up.railway.app//drivers/{{ $driver->id }}" method="GET">
+                <form action="https://fypaccelerate-production.up.railway.app/drivers/{{ $driver->id }}" method="GET">
                     <input type="submit" value="View {{ $driver->name }}'s Details">
                 </form>
             </div>
