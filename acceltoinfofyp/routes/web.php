@@ -58,6 +58,8 @@ Route::resource('drivers', DriverController::class); // Full CRUD for drivers
 Route::get('/editDriver/{id}', [DriverController::class, 'edit'])->name('driver.edit');
 Route::patch('/editDriver/{id}', [DriverController::class, 'update'])->name('driver.update');
 Route::get('/editDriver/{id}', [DriverController::class, 'edit'])->name('driver.edit');
+Route::get('/insertDriver', [DriverController::class, 'insert'])->name('driver.insert');
+Route::post('/insertDriver', [DriverController::class, 'create'])->name('driver.create');
 
 // Teams Routes
 Route::resource('teams', TeamController::class); // Full CRUD for teams

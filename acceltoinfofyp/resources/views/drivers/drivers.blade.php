@@ -9,7 +9,7 @@
 @endif
 <div class="create-driver">
     @if(auth()->check() && auth()->user()->is_admin)
-        <form action="https://fypaccelerate-production.up.railway.app/insert" method="GET">
+        <form action="insertDriver" method="GET">
             <input type="submit" value="Create Driver">
         </form>
     @endif

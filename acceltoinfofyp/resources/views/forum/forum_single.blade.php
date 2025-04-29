@@ -22,7 +22,7 @@
             <input type="submit" value="Delete {{ $forum->title }}">
         </form>
 
-        <form action="https://fypaccelerate-production.up.railway.app/editForum/{{ $forum->id }}" method="GET">
+        <form action="editForum/{{ $forum->id }}" method="GET">
             @csrf
             <input type="submit" value="Edit {{ $forum->title }}">
         </form>
@@ -53,6 +53,6 @@
         @endif
     </div>
 
-    <a href="https://fypaccelerate-production.up.railway.app/forum" class="btn btn-primary">Back to Forums</a>
+    <a href="forum" class="btn btn-primary">Back to Forums</a>
 </div>
 @endsection
