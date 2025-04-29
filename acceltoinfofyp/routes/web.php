@@ -42,6 +42,7 @@ Route::get('/editForum/{id}', [ForumController::class, 'edit'])->name('forum.edi
 Route::patch('/editTeam/{id}', [ForumController::class, 'update'])->name('forum.update');
 Route::get('/createForum', [ForumController::class, 'insert'])->name('forum.insert');
 Route::get('/forums', [ForumController::class, 'index'])->name('forum.index');
+Route::post('/forumcreate', [ForumController::class, 'create'])->name('forum.create');
 
 // Driver Stats Routes
 Route::prefix('driverstats')->group(function () {

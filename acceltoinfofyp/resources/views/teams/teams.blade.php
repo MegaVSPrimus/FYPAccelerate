@@ -1,8 +1,12 @@
 @extends('admin.nav')
 
 @section('content')
-
+@if(app()->environment('local'))
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+@else
 <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
+@endif
+
 
 @if(auth()->check() && auth()->user()->is_admin)
 

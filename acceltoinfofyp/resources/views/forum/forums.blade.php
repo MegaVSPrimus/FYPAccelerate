@@ -1,7 +1,10 @@
 @extends('admin.nav')
 @section('content')
+@if(app()->environment('local'))
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-@if(auth()->check())
+@else
+<link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
+@endif@if(auth()->check())
 
 <form action="https://fypaccelerate-production.up.railway.app/createForum" method="get">
     <button type="submit" class="btn btn-primary">Create a Post</button>

@@ -2,8 +2,11 @@
 
 @section('content')
 
+@if(app()->environment('local'))
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+@else
 <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
-
+@endif
 <div class="create-driver">
     @if(auth()->check() && auth()->user()->is_admin)
         <form action="https://fypaccelerate-production.up.railway.app/insert" method="GET">
