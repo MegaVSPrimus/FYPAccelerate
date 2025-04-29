@@ -1,5 +1,6 @@
 @extends('admin.nav')
 @section('content')
+<title>Create Forum Post</title>
 
 <style>
     .form-group {

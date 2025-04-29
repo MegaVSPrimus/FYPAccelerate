@@ -1,10 +1,6 @@
-
-
-<!DOCTYPE html>
-<html>
-<head>
+@extends('admin.nav')
+@section('content')
 <title>Add Driver to Database</title>
-</head>
 <body>
 <form action = "insertDriver" method = "post">
 	<input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
@@ -23,4 +19,4 @@
 	</table>
 </form>
 </body>
-</html>
+@endsection
