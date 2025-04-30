@@ -8,10 +8,10 @@
     @if ($driverStats)
     <p><b>Driver:</b> {{ $driver->name }} <br> 
     <b>Team:</b> {{ $driver->team }}</p>
-            <p><b>Number of race wins: </b>{{$driverstat->number_of_wins}}</p>
-            <p><b>Points scored:</b>{{$driverstat->points_scored}}</p>
-            <p><b>Number of races:</b>{{$driverstat->number_of_races}}</p>
-            <p><b>Number of podiums</b{{$driverstat->number_of_podiums}}></p>
+            <p><b>Number of race wins: </b>{{$driverStats->number_of_wins}}</p>
+            <p><b>Points scored:</b>{{$driverStats->points_scored}}</p>
+            <p><b>Number of races:</b>{{$driverStats->number_of_races}}</p>
+            <p><b>Number of podiums</b>{{$driverStats->number_of_podiums}}></p>
 
     @else
         <div class="message-box">
