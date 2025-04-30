@@ -69,7 +69,7 @@
     </div>
 @endif
 
-<form method="POST" action="/forumcreate" enctype="multipart/form-data">
+<form method="POST" action="forumcreate" enctype="multipart/form-data">
     @csrf
 
     <!-- Title Field -->

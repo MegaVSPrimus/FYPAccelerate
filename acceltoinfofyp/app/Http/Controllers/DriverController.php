@@ -73,10 +73,10 @@ foreach ($drivers as $driver) {
                 $driver->name = $data['name'];
 				$driver->team = $data['team'];
 				$driver->save();
-				return redirect('insert')->with('status',"Insert successfully");
+				return redirect('driver.drivers')->with('status',"Insert successfully");
 			}
 			catch(Exception $e){
-				return redirect('insert')->with('failed',"operation failed");
+				return redirect('driver.drivers')->with('failed',"operation failed");
 			}
 		}
     }
