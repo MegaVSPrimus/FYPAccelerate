@@ -2,10 +2,10 @@ READ ME:
 Models can be found in app/models.
 Controllers can be found in app/http/controller.
 Views can be found in resources/views.
-CSS can be found in resources/css.
+CSS can be found in public/css.
 The database can be found in database.
 
-Running the project:
+Running the project locally:
 1. Ensure xampp is running.
 2. Go to the base home with all folders from the zipped project. 
 3. In the directory type "cmd" and press Enter. 
@@ -20,3 +20,4 @@ Forums: a place to CRUD forum posts as a user and an admin.
 Gallery: An exclusive place for admins to CRUD images. 
 Upload: An exclusive place for admins to upload images.
 Profile: A place for users to edit their profiles.
+Fantasy League: Users can create their own fantasy league.
