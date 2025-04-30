@@ -12,6 +12,8 @@
     @if ($team)
         <h1>{{ $team->name }}</h1>
         <p>Team Principal: {{ $team->team_principal }}</p>
+        <p>Engine Supplier: {{ $team->engine_supplier }}</p>
+
     @else
         <div class="message-box">
             <p>Team stats not found.</p>
