@@ -49,7 +49,11 @@ class LoginRegisterController extends Controller implements HasMiddleware
         $credentials = $request->only('email', 'password');
         Auth::attempt($credentials);
         $request->session()->regenerate();
-        return view('generic.welcome');
+        $drivers = Driver::all(); // Retrieve all drivers
+        $forums = Forum::all();  // Retrieve all forum posts
+        $images = Image::all();  // Retrieve all forum posts
+        $fantasyTeams = FantasyTeam::all();
+        return view('generic.welcome', compact('drivers', 'forums','images','fantasyTeams'));
     }
 
     public function login(): View
